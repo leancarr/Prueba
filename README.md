@@ -1,12 +1,12 @@
 # Donkey Kong - RTM32
 
 <div align="center">
-  <img src="assets/kong.png" width="100" alt="Donkey Kong">
-  <img src="assets/jumpman.png" width="60" alt="Mario (Jumpman)">
-  <img src="assets/pauline.png" width="60" alt="Pauline">
-  <img src="assets/barrel.png" width="60" alt="Barril">
-  <img src="assets/fireelemental.png" width="60" alt="Fuego">
-  <img src="assets/hammer.png" width="60" alt="Martillo">
+  <img src="preview/kong.png" alt="Donkey Kong">
+  <img src="preview/jumpman.png" alt="Mario (Jumpman)">
+  <img src="preview/pauline.png" alt="Pauline">
+  <img src="preview/barrel.png" alt="Barril">
+  <img src="preview/fireelemental.png" alt="Fuego">
+  <img src="preview/hammer.png" alt="Martillo">
 </div>
 
 ## Descripción del juego
