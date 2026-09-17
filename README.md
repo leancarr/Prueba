@@ -1,12 +1,10 @@
 # Donkey Kong - RTM32
 
 <div align="center">
-  <img src="preview/kong.png" alt="Donkey Kong">
+  <img src="preview/kong.png" alt="Donkey Kong Animaciones">
+  <br>
   <img src="preview/jumpman.png" alt="Mario (Jumpman)">
   <img src="preview/pauline.png" alt="Pauline">
-  <img src="preview/barrel.png" alt="Barril">
-  <img src="preview/fireelemental.png" alt="Fuego">
-  <img src="preview/hammer.png" alt="Martillo">
 </div>
 
 ## Descripción del juego
@@ -50,46 +48,36 @@ El ascenso a la cima se divide en 4 etapas clásicas (niveles de altura), cada u
 
 ### Etapa 1: "25m" (Las Rampas)
 El nivel icónico que lo empezó todo. Una estructura en zig-zag de vigas rojas.
-- **Entorno**: Vigas torcidas formando rampas. Escaleras que conectan los pisos.
-- **Desafío Principal**: Esquivar la lluvia incesante de barriles rodantes y evitar el fuego que nace del tambor en la base.
-- **Atmósfera**: Clásica e introductoria, ideal para dominar el salto.
 
 ### Etapa 2: "50m" (La Fábrica de Cemento / Cintas Transportadoras)
 El nivel de las plataformas móviles (a menudo omitido en versiones de consola, pero presente en el arcade original).
-- **Entorno**: Cintas transportadoras que mueven a Jumpman hacia la izquierda o derecha.
-- **Desafío Principal**: Evitar los bloques de cemento ardiente que circulan por las cintas y dominar el salto sobre plataformas móviles. Las bolas de fuego son más agresivas.
-- **Atmósfera**: Mecánica, rápida e impredecible.
 
 ### Etapa 3: "75m" (Los Ascensores)
-Un salto al vacío.
-- **Entorno**: Dos ejes de ascensores mecánicos que suben y bajan constantemente, acompañados de plataformas estables.
-- **Desafío Principal**: Calcular los saltos entre ascensores en movimiento y esquivar los resortes (bouncers) que caen desde la cima sin patrón aparente.
-- **Atmósfera**: Tensa y vertiginosa. Un salto mal medido significa una caída letal.
+Un salto al vacío. Ascensores mecánicos que suben y bajan constantemente.
 
 ### Etapa 4: "100m" (Los Remaches)
-El enfrentamiento final para derrotar a Donkey Kong.
-- **Entorno**: Una estructura recta con múltiples pisos soportada por remaches amarillos brillantes.
-- **Desafío Principal**: Jumpman debe caminar sobre todos los remaches para quitarlos. Las llamas vivientes lo perseguirán implacablemente.
-- **Meta**: Al quitar todos los remaches, la estructura colapsa, Donkey Kong cae al vacío y Pauline es rescatada.
+El enfrentamiento final para derrotar a Donkey Kong quitando los soportes de la estructura.
 
-## Sprites
+<div align="center">
+  <img src="preview/tilemap.png" alt="Tileset de los Niveles">
+  <p><i>Tileset (Bloques de construcción) para renderizar los niveles</i></p>
+</div>
 
-| Sprite | Descripción | Frames |
+## Hoja de Sprites (Animaciones completas)
+
+| Elemento | Animaciones completas (Vista previa ampliada) | Dimensiones Originales |
 |--------|-------------|--------|
-| **Jumpman (Mario)** | Héroe del juego. Corre, salta, sube escaleras y muere. | 6+ |
-| **Donkey Kong** | El antagonista. Se golpea el pecho, tira barriles y hace muecas. | 4+ |
-| **Pauline** | La damisela en apuros. Pide auxilio ("HELP!"). | 2+ |
-| **Barril (Rodando)** | Principal obstáculo mortal. Rueda por las vigas. | 4 |
-| **Llama (Fireball)** | Enemigo errático que persigue a Jumpman. | 2 |
-| **Martillo** | Ítem de poder temporal para destruir barriles. | 2 |
-| **Objetos (Bonus)** | Sombrilla, sombrero y bolso de Pauline. Dan puntos. | 3 |
-| **Vigas y Escaleras** | Elementos estructurales que forman el terreno del nivel. | Varios |
+| **Jumpman (Mario)** | <img src="preview/jumpman.png" width="150"> | 16x16 por frame |
+| **Donkey Kong** | <img src="preview/kong.png" width="250"> | 40x32 por frame |
+| **Pauline** | <img src="preview/pauline.png" width="100"> | 16x24 por frame |
+| **Barriles** | <img src="preview/barrel.png" width="150"> | 16x16 por frame |
+| **Fuego (Enemigo)** | <img src="preview/fireelemental.png" width="100"> | 16x16 por frame |
+| **Martillo** | <img src="preview/hammer.png" width="100"> | 10x14 por frame |
 
-> **Nota:** Todos los sprites originales fueron extraídos y escalados perfectamente a 32x32 píxeles utilizando un algoritmo *Nearest Neighbor* para mantener los bordes duros y nítidos (sin borrosidad/antialiasing) listos para ser renderizados por la CPU.
+> **Nota:** En la carpeta `assets/` se encuentran las imágenes en su **resolución original 1x** (Pixel Perfect) idéntica a la del Arcade original, listas para cargarse en memoria y ser renderizadas por la GPU/CPU de la arquitectura RTM32. En el README se muestran escaladas (Zoom 3x) para mejor visualización.
 
 ## Características visuales
 
-- Resolución de pantalla orientada a texturas de **32x32 píxeles** en modo consola/VGA.
 - Paleta de colores vibrantes sobre un fondo negro profundo para resaltar la obra nocturna.
 - Animaciones clásicas en pixel-art de 8 bits.
 - Vista lateral de plataformas estáticas de una sola pantalla (Single-screen platformer).
